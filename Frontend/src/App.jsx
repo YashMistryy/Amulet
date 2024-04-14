@@ -12,7 +12,7 @@ function App() {
     <DndProvider backend={HTML5Backend}>
       <Routes>
         <Route path="/signin" element={<SignInSide />} />
-        <Route path="/" element={<Dashboard />} />
+        <Route path="/" element={<Dashboard/>} />
       </Routes>
       </DndProvider>
   );

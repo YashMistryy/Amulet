@@ -60,7 +60,6 @@ const Column = ({title,headingColor,column,cards,setCards}) => {
     }
 
     const handleDragEnd = (e)=>{
-        debugger
         setActive(false)
         clearHighLights()
         const card_id = e.dataTransfer.getData("card_id");

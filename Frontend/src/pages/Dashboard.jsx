@@ -2,9 +2,10 @@ import React, { useState } from 'react'
 import Column from '../components/Column'
 import {Default_cards} from '../utils/constants'
 import { BurnBarrel } from '../components/Card'
+import ProSidebar, {    } from '../components/ProSidebar'
 const Dashboard = () => {
   return (
-    <div className='h-screen w-full bg-neutral-900 text-neutral-50 '>
+    <div className='h-screen w-full bg-neutral-900 text-neutral-50 font-font1'>
         <Board/>
     </div>
   )
@@ -12,8 +13,9 @@ const Dashboard = () => {
 //title,headingColor,column,cards,setCards
 const Board = ()=>{
     const [cards,setCards] = useState(Default_cards)
-    return(
-        <div className="flex h-full w-full gap-3 overflow-scroll p-12">
+    return(<div className='flex h-screen'>
+            <ProSidebar/>
+        <div className="flex h-full justify-between w-full gap-3 overflow-scroll p-12 no-scrollbar">
                 <Column
                 title="To do"
                 headingColor = "text-green-200"
@@ -43,6 +45,7 @@ const Board = ()=>{
                 setCards = {setCards}
                 />
                 <BurnBarrel setCards={setCards} cards={cards}/>
+        </div>
         </div>
     )
 }
